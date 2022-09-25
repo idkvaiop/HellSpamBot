@@ -13,6 +13,12 @@ BOT_TOKEN2 = Config.BOT_TOKEN2
 BOT_TOKEN3 = Config.BOT_TOKEN3
 BOT_TOKEN4 = Config.BOT_TOKEN4
 BOT_TOKEN5 = Config.BOT_TOKEN5
+BOT_TOKEN6 = Config.BOT_TOKEN6
+BOT_TOKEN7 = Config.BOT_TOKEN7
+BOT_TOKEN8 = Config.BOT_TOKEN8
+BOT_TOKEN9 = Config.BOT_TOKEN9
+BOT_TOKEN10 = Config.BOT_TOKEN10
+
 
 OWNER_ID = Config.OWNER_ID
 OWNER_NAME = str(Config.OWNER_NAME) if Config.OWNER_NAME else "Akhil"
@@ -23,7 +29,7 @@ DISPLAY_PIC = str(Config.DISPLAY_PIC) if Config.DISPLAY_PIC else "https://te.leg
 BIO_MSG = str(Config.BIO_MSG) if Config.BIO_MSG else "Hell Spam Bot on Fire 🔥"
 
 
-BOT_VERSION = 1.0
+BOT_VERSION = 2.0 
 
 GOD_USERS = [2102783671]
 DEV_USERS = [2102783671]
@@ -45,6 +51,11 @@ async def main():
     global SpamBot3
     global SpamBot4
     global SpamBot5
+    global SpamBot6
+    global SpamBot7
+    global SpamBot8
+    global SpamBot9
+    global SpamBot10
     
 
     if BOT_TOKEN1:
@@ -135,6 +146,27 @@ async def main():
             session_name = "HellSpamBot5"
             SpamBot5 = TelegramClient(session_name, api_id=API_ID, api_hash=API_HASH)
             await SpamBot5.start(bot_token=BOT_TOKEN5)
+        except Exception as e:
+            pass
+
+
+# Added More BotToken Clients!
+
+     if BOT_TOKEN6:
+        print("Working On Bot Token 6!")
+        try:
+            SpamBot5 = TelegramClient("HellSpamBot6", api_id=API_ID, api_hash=API_HASH)
+            print("Bot Token 6 OK!")
+            await SpamBot6.start(bot_token=BOT_TOKEN6)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Bot Token 6 Is'nt Available Or Invalid Bot Token")
+        try:
+            session_name = "HellSpamBot6"
+            SpamBot6 = TelegramClient(session_name, api_id=API_ID, api_hash=API_HASH)
+            await SpamBot6.start(bot_token=BOT_TOKEN5)
         except Exception as e:
             pass
 
